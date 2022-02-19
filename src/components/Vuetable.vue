@@ -71,9 +71,8 @@
         </template>
       </colgroup>
       <tbody v-cloak class="vuetable-body">
-        <template v-for="(item, itemIndex) in tableData">
+        <template v-for="(item, itemIndex) in tableData" :key="itemIndex">
           <tr 
-            :key="itemIndex"
             :item-index="itemIndex" 
             :render="onRowChanged(item)" 
             :class="onRowClass(item, itemIndex)"
@@ -212,9 +211,8 @@
     </tr>
   </thead>
   <tbody v-cloak class="vuetable-body">
-    <template v-for="(item, itemIndex) in tableData">
+    <template v-for="(item, itemIndex) in tableData" :key="itemIndex">
       <tr @dblclick="onRowDoubleClicked(item, $event)" 
-        :key="itemIndex"
         :item-index="itemIndex" 
         :render="onRowChanged(item)" 
         :class="onRowClass(item, itemIndex)"
@@ -268,7 +266,6 @@
                 @contextmenu="onCellRightClicked(item, field, $event)"
               ></td>
               <td v-else 
-                :key="fieldIndex"
                 :class="field.dataClass"
                 v-html="getObjectValue(item, field.name, '')"
                 @click="onCellClicked(item, field, $event)"

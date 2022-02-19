@@ -1,7 +1,7 @@
 {
   "name": "vuetable-2",
-  "version": "1.7.5",
-  "description": "Datatable component for Vue 2.x",
+  "version": "3.0.0",
+  "description": "Datatable component for Vue 3.x",
   "main": "dist/vuetable-2.js",
   "license": "MIT",
   "author": "Rati Wannapanop <rati.wannapanop@gmail.com>",
